@@ -1,17 +1,23 @@
 {
   "id": "kingdoms-warfare",
   "title": "Kingdoms & Warfare",
-  "description": "MCDM Kingdoms & Warfare rules integration for FoundryVTT v11/v12. Adds Warfare Unit item sheets (ATK/DEF/POW/TOU/MOR/COM), Commander/Domain actor sheets with Power Pool tracking, a pre-built compendium of Saxton's army units, warfare combat initiative, and a battlefield scene creation tool.",
+  "description": "MCDM Kingdoms & Warfare rules integration for FoundryVTT. Adds Warfare Unit item sheets (ATK/DEF/POW/TOU/MOR/COM), Commander actor sheets with Power Pool tracking, pre-made unit compendium, and battlefield scene tools.",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "11",
     "verified": "12"
   },
   "authors": [
-    { "name": "Community Port" }
+    {
+      "name": "Community Developer"
+    }
   ],
-  "esmodules": ["scripts/main.js"],
-  "styles": ["styles/warfare.css"],
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/warfare.css"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -27,19 +33,8 @@
       "type": "Item"
     }
   ],
-  "templates": {
-    "Item": {
-      "warfareUnit": {
-        "icon": "icons/svg/item-bag.svg",
-        "label": "Warfare Unit"
-      }
-    },
-    "Actor": {
-      "commander": {
-        "icon": "icons/svg/stature.svg",
-        "label": "Commander"
-      }
-    }
-  },
+  "url": "",
+  "bugs": "",
+  "changelog": "",
   "flags": {}
 }
