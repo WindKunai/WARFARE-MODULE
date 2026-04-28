@@ -25,6 +25,20 @@
       "path": "lang/en.json"
     }
   ],
+  "documentTypes": {
+    "Item": {
+      "warfareUnit": {
+        "label": "Warfare Unit",
+        "icon": "icons/svg/item-bag.svg"
+      }
+    },
+    "Actor": {
+      "commander": {
+        "label": "Commander",
+        "icon": "icons/svg/stature.svg"
+      }
+    }
+  },
   "packs": [
     {
       "name": "saxton-units",
