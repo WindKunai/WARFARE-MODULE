@@ -9,7 +9,7 @@
   },
   "authors": [
     {
-      "name": "Community Developer"
+      "name": "WindKunai"
     }
   ],
   "esmodules": [
@@ -30,11 +30,14 @@
       "name": "saxton-units",
       "label": "Saxton's Army Units",
       "path": "packs/saxton-units.json",
-      "type": "Item"
+      "type": "Item",
+      "system": "dnd5e"
     }
   ],
-  "url": "",
-  "bugs": "",
-  "changelog": "",
+  "url": "https://github.com/WindKunai/WARFARE-MODULE",
+  "bugs": "https://github.com/WindKunai/WARFARE-MODULE/issues",
+  "changelog": "https://github.com/WindKunai/WARFARE-MODULE/releases",
+  "manifest": "https://raw.githubusercontent.com/WindKunai/WARFARE-MODULE/main/module.json",
+  "download": "https://github.com/WindKunai/WARFARE-MODULE/archive/refs/heads/main.zip",
   "flags": {}
 }
