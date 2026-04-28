@@ -30,8 +30,7 @@
       "name": "saxton-units",
       "label": "Saxton's Army Units",
       "path": "packs/saxton-units.json",
-      "type": "Item",
-      "system": "dnd5e"
+      "type": "Item"
     }
   ],
   "url": "https://github.com/WindKunai/WARFARE-MODULE",
