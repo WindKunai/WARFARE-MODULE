@@ -84,7 +84,7 @@ class CommanderData extends foundry.abstract.TypeDataModel {
 // ITEM SHEET – Warfare Unit
 // ─────────────────────────────────────────────────────────────────────────────
 
-class WarfareUnitSheet extends ItemSheet {
+class MySheet extends foundry.appv1.sheets.ItemSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["kingdoms-warfare", "sheet", "item", "warfare-unit"],
@@ -108,36 +108,45 @@ class WarfareUnitSheet extends ItemSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    // Tab switching
-    html.find(".kw-sheet-tabs .tab-item").on("click", ev => {
-      const tab = ev.currentTarget.dataset.tab;
-      html.find(".tab-item").removeClass("active");
-      html.find(".kw-tab-content").removeClass("active");
-      ev.currentTarget.classList.add("active");
-      html.find(`.kw-tab-content[data-tab="${tab}"]`).addClass("active");
+    // Tab switching (native DOM)
+    html.querySelectorAll(".kw-sheet-tabs .tab-item").forEach(tabBtn => {
+      tabBtn.addEventListener("click", ev => {
+        const tab = ev.currentTarget.dataset.tab;
+        html.querySelectorAll(".tab-item").forEach(t => t.classList.remove("active"));
+        html.querySelectorAll(".kw-tab-content").forEach(c => c.classList.remove("active"));
+        ev.currentTarget.classList.add("active");
+        html.querySelector(`.kw-tab-content[data-tab="${tab}"]`)?.classList.add("active");
+      });
     });
 
     if (!this.isEditable) return;
 
-    // Roll buttons
-    html.find(".kw-roll-btn[data-roll-type]").on("click", ev => {
-      const type = ev.currentTarget.dataset.rollType;
-      this._onRoll(type);
+    // Roll buttons (native DOM)
+    html.querySelectorAll(".kw-roll-btn[data-roll-type]").forEach(btn => {
+      btn.addEventListener("click", ev => {
+        const type = ev.currentTarget.dataset.rollType;
+        this._onRoll(type);
+      });
     });
 
-    // Add trait
-    html.find(".kw-add-trait").on("click", async () => {
-      const traits = foundry.utils.deepClone(this.item.system.traits ?? []);
-      traits.push({ name: "", description: "" });
-      await this.item.update({ "system.traits": traits });
-    });
+    // Add trait (native DOM)
+    const addTraitBtn = html.querySelector(".kw-add-trait");
+    if (addTraitBtn) {
+      addTraitBtn.addEventListener("click", async () => {
+        const traits = foundry.utils.deepClone(this.item.system.traits ?? []);
+        traits.push({ name: "", description: "" });
+        await this.item.update({ "system.traits": traits });
+      });
+    }
 
-    // Remove trait
-    html.find(".kw-remove-trait").on("click", async ev => {
-      const idx = parseInt(ev.currentTarget.dataset.idx);
-      const traits = foundry.utils.deepClone(this.item.system.traits ?? []);
-      traits.splice(idx, 1);
-      await this.item.update({ "system.traits": traits });
+    // Remove trait (native DOM)
+    html.querySelectorAll(".kw-remove-trait").forEach(btn => {
+      btn.addEventListener("click", async ev => {
+        const idx = parseInt(ev.currentTarget.dataset.idx);
+        const traits = foundry.utils.deepClone(this.item.system.traits ?? []);
+        traits.splice(idx, 1);
+        await this.item.update({ "system.traits": traits });
+      });
     });
   }
 
@@ -222,52 +231,66 @@ class CommanderSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    // Tab switching
-    html.find(".kw-sheet-tabs .tab-item").on("click", ev => {
-      const tab = ev.currentTarget.dataset.tab;
-      html.find(".tab-item").removeClass("active");
-      html.find(".kw-tab-content").removeClass("active");
-      ev.currentTarget.classList.add("active");
-      html.find(`.kw-tab-content[data-tab="${tab}"]`).addClass("active");
+    // Tab switching (native DOM)
+    html.querySelectorAll(".kw-sheet-tabs .tab-item").forEach(tabBtn => {
+      tabBtn.addEventListener("click", ev => {
+        const tab = ev.currentTarget.dataset.tab;
+        html.querySelectorAll(".tab-item").forEach(t => t.classList.remove("active"));
+        html.querySelectorAll(".kw-tab-content").forEach(c => c.classList.remove("active"));
+        ev.currentTarget.classList.add("active");
+        html.querySelector(`.kw-tab-content[data-tab="${tab}"]`)?.classList.add("active");
+      });
     });
 
     if (!this.isEditable) return;
 
-    // Roll buttons
-    html.find(".kw-roll-btn[data-roll-type]").on("click", ev => {
-      const type = ev.currentTarget.dataset.rollType;
-      const skill = ev.currentTarget.dataset.skill;
-      this._onRoll(type, skill);
+    // Roll buttons (native DOM)
+    html.querySelectorAll(".kw-roll-btn[data-roll-type]").forEach(btn => {
+      btn.addEventListener("click", ev => {
+        const type = ev.currentTarget.dataset.rollType;
+        const skill = ev.currentTarget.dataset.skill;
+        this._onRoll(type, skill);
+      });
     });
 
-    // Reaction pips
-    html.find(".pip-avail").on("click", ev => {
-      const idx = parseInt(ev.currentTarget.dataset.pipIdx);
-      const used = this.actor.system.reactionsUsed;
-      // Toggle: if clicking on a used pip, set used = idx (unreact all after)
-      const newUsed = idx < used ? idx : idx + 1;
-      this.actor.update({ "system.reactionsUsed": newUsed });
+    // Reaction pips (native DOM)
+    html.querySelectorAll(".pip-avail").forEach(pip => {
+      pip.addEventListener("click", ev => {
+        const idx = parseInt(ev.currentTarget.dataset.pipIdx);
+        const used = this.actor.system.reactionsUsed;
+        const newUsed = idx < used ? idx : idx + 1;
+        this.actor.update({ "system.reactionsUsed": newUsed });
+      });
     });
 
-    // Add / remove powers
-    html.find(".kw-add-power").on("click", async () => {
-      const powers = foundry.utils.deepClone(this.actor.system.powers ?? []);
-      powers.push({ name: "", description: "" });
-      await this.actor.update({ "system.powers": powers });
-    });
-    html.find(".kw-remove-power").on("click", async ev => {
-      const idx = parseInt(ev.currentTarget.dataset.idx);
-      const powers = foundry.utils.deepClone(this.actor.system.powers ?? []);
-      powers.splice(idx, 1);
-      await this.actor.update({ "system.powers": powers });
+    // Add power (native DOM)
+    const addPowerBtn = html.querySelector(".kw-add-power");
+    if (addPowerBtn) {
+      addPowerBtn.addEventListener("click", async () => {
+        const powers = foundry.utils.deepClone(this.actor.system.powers ?? []);
+        powers.push({ name: "", description: "" });
+        await this.actor.update({ "system.powers": powers });
+      });
+    }
+
+    // Remove power (native DOM)
+    html.querySelectorAll(".kw-remove-power").forEach(btn => {
+      btn.addEventListener("click", async ev => {
+        const idx = parseInt(ev.currentTarget.dataset.idx);
+        const powers = foundry.utils.deepClone(this.actor.system.powers ?? []);
+        powers.splice(idx, 1);
+        await this.actor.update({ "system.powers": powers });
+      });
     });
 
-    // Remove unit entry
-    html.find(".kw-remove-unit").on("click", async ev => {
-      const idx = parseInt(ev.currentTarget.dataset.idx);
-      const units = foundry.utils.deepClone(this.actor.system.units ?? []);
-      units.splice(idx, 1);
-      await this.actor.update({ "system.units": units });
+    // Remove unit entry (native DOM)
+    html.querySelectorAll(".kw-remove-unit").forEach(btn => {
+      btn.addEventListener("click", async ev => {
+        const idx = parseInt(ev.currentTarget.dataset.idx);
+        const units = foundry.utils.deepClone(this.actor.system.units ?? []);
+        units.splice(idx, 1);
+        await this.actor.update({ "system.units": units });
+      });
     });
   }
 
@@ -348,7 +371,7 @@ class WarfareBattlefieldTool {
     const name = await Dialog.prompt({
       title: "Warfare Battlefield",
       content: `<label>Scene name: <input type="text" name="name" value="Warfare Battlefield" style="width:200px"></label>`,
-      callback: html => html.find("[name=name]").val(),
+      callback: html => html.querySelector("[name=name]")?.value || "Warfare Battlefield",
     });
 
     const sceneData = {
@@ -429,9 +452,14 @@ function registerHelpers() {
   Handlebars.registerHelper("eq", (a, b) => a === b);
 
   Handlebars.registerHelper("select", function(value, options) {
-    const wrapper = $(`<select>${options.fn(this)}</select>`);
-    wrapper.find(`[value="${value}"]`).attr("selected", true);
-    return wrapper.html();
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = `<select>${options.fn(this)}</select>`;
+    const select = wrapper.querySelector("select");
+    if (select) {
+      const option = select.querySelector(`[value="${value}"]`);
+      if (option) option.setAttribute("selected", "true");
+    }
+    return select?.innerHTML || wrapper.innerHTML;
   });
 }
 
@@ -501,7 +529,9 @@ const WarfareAPI = {
 
 Hooks.on("renderChatMessage", (message, html) => {
   // Add the kw-chat-card class rendering to chat cards if not already styled
-  html.find(".kw-chat-card").css("font-family", "Palatino Linotype, serif");
+  html.querySelectorAll(".kw-chat-card").forEach(el => {
+    el.style.fontFamily = "Palatino Linotype, serif";
+  });
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -550,13 +580,19 @@ Hooks.on("renderCombatTracker", async (app, html, data) => {
       // Show power pool in tracker
       const pp = actor.system?.powerPool;
       if (pp) {
-        const badge = html.find(`.combatant[data-combatant-id="${turn.id}"] .token-name h4`);
-        badge.append(`<span class="kw-combatant-badge" style="background:#3a5a20">PP ${pp.current}/${pp.max}</span>`);
+        const badge = html.querySelector(`.combatant[data-combatant-id="${turn.id}"] .token-name h4`);
+        if (badge) {
+          const span = document.createElement("span");
+          span.className = "kw-combatant-badge";
+          span.style.background = "#3a5a20";
+          span.textContent = `PP ${pp.current}/${pp.max}`;
+          badge.appendChild(span);
+        }
       }
     }
   }
   // For items used as tokens (via linked actors of type warfareUnit), inject stat badges
-  html.find(".combatant").each((i, el) => {
+  html.querySelectorAll(".combatant").forEach(el => {
     const id = el.dataset.combatantId;
     const combatant = game.combat?.combatants.get(id);
     const actor = combatant?.actor;
