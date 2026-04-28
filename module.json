@@ -1,0 +1,32 @@
+{
+  "id": "kingdoms-warfare",
+  "title": "Kingdoms & Warfare",
+  "description": "MCDM Kingdoms & Warfare rules integration for FoundryVTT v11/v12. Adds Warfare Unit item sheets (ATK/DEF/POW/TOU/MOR/COM), Commander/Domain actor sheets with Power Pool tracking, a pre-built compendium of Saxton's army units, warfare combat initiative, and a battlefield scene creation tool.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "authors": [
+    { "name": "Community Port" }
+  ],
+  "esmodules": ["scripts/main.js"],
+  "styles": ["styles/warfare.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "saxton-units",
+      "label": "Saxton's Army Units",
+      "path": "packs/saxton-units.json",
+      "type": "Item",
+      "system": "dnd5e"
+    }
+  ],
+  "flags": {}
+}
