@@ -2,7 +2,7 @@
   "id": "kingdoms-warfare",
   "title": "Kingdoms & Warfare",
   "description": "MCDM Kingdoms & Warfare rules integration for FoundryVTT. Adds Warfare Unit item sheets (ATK/DEF/POW/TOU/MOR/COM), Commander actor sheets with Power Pool tracking, pre-made unit compendium, and battlefield scene tools.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "11",
     "verified": "14"
