@@ -1,0 +1,510 @@
+{
+  "units": [
+    {
+      "id": "saxton_human_infantry_1",
+      "name": "Human Infantry",
+      "source": "Saxton's Army - Gravesford",
+      "ancestry": "Human",
+      "unitType": "Infantry",
+      "tier": 1,
+      "experience": "Regular",
+      "equipment": "Medium",
+      "size": 6,
+      "commander": "Lord Saxton",
+      "quantity": 3,
+      "stats": {
+        "atk": 0,
+        "def": 0,
+        "pow": 0,
+        "tou": 0,
+        "mor": 0,
+        "com": 1
+      },
+      "traits": [
+        "Infantry",
+        "Formation",
+        "Disciplined"
+      ],
+      "maneuvers": [
+        "Follow Up",
+        "Set for Charge"
+      ],
+      "specialAbilities": [
+        "Skirmishers",
+        "Death Commandos",
+        "Patron's Curse"
+      ],
+      "notes": "Core human infantry troops. Base stats example - actual stats determined by ancestry and equipment.",
+      "casualtyDie": "d6",
+      "movement": 1,
+      "attacks": 1,
+      "damage": 1,
+      "rank_deployment": [
+        "Vanguard",
+        "Center",
+        "Reserve",
+        "Rear"
+      ]
+    },
+    {
+      "id": "saxton_human_artillery_longbow",
+      "name": "Human Artillery (Longbow)",
+      "source": "Saxton's Army - Gravesford",
+      "ancestry": "Human",
+      "unitType": "Artillery",
+      "tier": 1,
+      "experience": "Regular",
+      "equipment": "Light",
+      "size": 6,
+      "commander": "Magus Therin",
+      "quantity": 2,
+      "stats": {
+        "atk": 0,
+        "def": 0,
+        "pow": 0,
+        "tou": 0,
+        "mor": 0,
+        "com": 0
+      },
+      "traits": [
+        "Archers",
+        "Ranged",
+        "Formation"
+      ],
+      "maneuvers": [
+        "Volley",
+        "Covering Fire"
+      ],
+      "specialAbilities": [
+        "Skirmishers",
+        "Death Commandos",
+        "Patron's Curse"
+      ],
+      "notes": "Human archers with longbows. Squishy but dangerous from range.",
+      "casualtyDie": "d6",
+      "movement": 1,
+      "attacks": 1,
+      "damage": 1,
+      "rank_deployment": [
+        "Center"
+      ]
+    },
+    {
+      "id": "saxton_bloodfangs",
+      "name": "Bloodfangs",
+      "source": "Saxton's Army - Gravesford",
+      "ancestry": "Goblinoid",
+      "unitType": "Cavalry",
+      "tier": 2,
+      "experience": "Regular",
+      "equipment": "Medium",
+      "size": 6,
+      "commander": "Sir Anglim",
+      "quantity": 1,
+      "stats": {
+        "atk": 0,
+        "def": 0,
+        "pow": 1,
+        "tou": 0,
+        "mor": 0,
+        "com": 0
+      },
+      "traits": [
+        "Cavalry",
+        "Mounted",
+        "Fast"
+      ],
+      "maneuvers": [
+        "Charge",
+        "Skirmish",
+        "Withdraw"
+      ],
+      "specialAbilities": [
+        "Skirmishers",
+        "Death Commandos",
+        "Patron's Curse"
+      ],
+      "notes": "Nasty cavalry unit with good combat prowess. Quite effective in battle.",
+      "casualtyDie": "d6",
+      "movement": 1,
+      "attacks": 1,
+      "damage": 2,
+      "rank_deployment": [
+        "Mobile across battlefield"
+      ]
+    },
+    {
+      "id": "saxton_goblin_sappers",
+      "name": "Goblin Sappers",
+      "source": "Saxton's Army - Gravesford",
+      "ancestry": "Goblinoid",
+      "unitType": "Infantry",
+      "tier": 2,
+      "experience": "Regular",
+      "equipment": "Medium",
+      "size": 6,
+      "commander": "Prelate Ellingwood",
+      "quantity": 1,
+      "stats": {
+        "atk": 0,
+        "def": 0,
+        "pow": 0,
+        "tou": 0,
+        "mor": 0,
+        "com": 1
+      },
+      "traits": [
+        "Infantry",
+        "Sappers",
+        "Engineering"
+      ],
+      "maneuvers": [
+        "Sabotage",
+        "Fortification_Breaker",
+        "Set for Charge"
+      ],
+      "specialAbilities": [
+        "Skirmishers",
+        "Death Commandos",
+        "Patron's Curse"
+      ],
+      "notes": "Specialized goblinoid sappers capable of taking out fortifications. Can potentially breach hero defenses.",
+      "casualtyDie": "d6",
+      "movement": 1,
+      "attacks": 1,
+      "damage": 1,
+      "rank_deployment": [
+        "Vanguard",
+        "Center",
+        "Reserve"
+      ]
+    },
+    {
+      "id": "saxton_goblin_worg_riders",
+      "name": "Goblin Worg-riders",
+      "source": "Saxton's Army - Gravesford",
+      "ancestry": "Goblinoid",
+      "unitType": "Cavalry",
+      "tier": 1,
+      "experience": "Regular",
+      "equipment": "Light",
+      "size": 6,
+      "commander": "Sir Anglim",
+      "quantity": 1,
+      "stats": {
+        "atk": 0,
+        "def": 0,
+        "pow": 1,
+        "tou": 0,
+        "mor": 0,
+        "com": 0
+      },
+      "traits": [
+        "Cavalry",
+        "Mounted_Worg",
+        "Fast"
+      ],
+      "maneuvers": [
+        "Charge",
+        "Skirmish",
+        "Withdraw"
+      ],
+      "specialAbilities": [
+        "Skirmishers",
+        "Death Commandos",
+        "Patron's Curse"
+      ],
+      "notes": "Mobile goblinoid cavalry riders mounted on fierce worgs.",
+      "casualtyDie": "d6",
+      "movement": 1,
+      "attacks": 1,
+      "damage": 2,
+      "rank_deployment": [
+        "Mobile across battlefield"
+      ]
+    },
+    {
+      "id": "saxton_bugbear_heavy_claw",
+      "name": "Bugbear Heavy Claw",
+      "source": "Saxton's Army - Gravesford",
+      "ancestry": "Goblinoid",
+      "unitType": "Infantry",
+      "tier": 3,
+      "experience": "Regular",
+      "equipment": "Heavy",
+      "size": 6,
+      "commander": "Lady Morgant",
+      "quantity": 1,
+      "stats": {
+        "atk": 0,
+        "def": 0,
+        "pow": 4,
+        "tou": 4,
+        "mor": 0,
+        "com": 1
+      },
+      "traits": [
+        "Infantry",
+        "Heavy",
+        "Brutal",
+        "Melee"
+      ],
+      "maneuvers": [
+        "Heavy_Charge",
+        "Crush",
+        "Set for Charge"
+      ],
+      "specialAbilities": [
+        "Skirmishers",
+        "Death Commandos",
+        "Patron's Curse"
+      ],
+      "notes": "Powerful heavy assault unit. Wreaks havoc against infantry. Significant threat on battlefield.",
+      "casualtyDie": "d6",
+      "movement": 1,
+      "attacks": 1,
+      "damage": 2,
+      "rank_deployment": [
+        "Vanguard",
+        "Center",
+        "Reserve"
+      ]
+    },
+    {
+      "id": "saxton_grim_front",
+      "name": "Grim Front",
+      "source": "Saxton's Army - Gravesford (Conditional)",
+      "ancestry": "Undead",
+      "unitType": "Special Unit",
+      "tier": 3,
+      "experience": "Regular",
+      "equipment": "N/A",
+      "size": 6,
+      "commander": "Lord Saxton",
+      "quantity": 1,
+      "stats": {
+        "atk": 0,
+        "def": 0,
+        "pow": 0,
+        "tou": 0,
+        "mor": -1,
+        "com": 0
+      },
+      "traits": [
+        "Undead",
+        "Special Unit",
+        "Necromantic"
+      ],
+      "maneuvers": [],
+      "specialAbilities": [
+        "Skirmishers",
+        "Death Commandos",
+        "Patron's Curse"
+      ],
+      "notes": "Undead special unit granted by defeating/not defeating Caliga Lifebane the necromancer. Only available if necromancer's activities not disrupted.",
+      "casualtyDie": "d6",
+      "movement": 1,
+      "attacks": 1,
+      "damage": 1,
+      "rank_deployment": [
+        "Vanguard",
+        "Center"
+      ],
+      "availability": "Conditional - only if Caliga Lifebane not defeated",
+      "reference": "See Domains & Intrigue chapter page 87 for full details"
+    }
+  ],
+  "unitTypes": [
+    {
+      "id": "infantry",
+      "name": "Infantry",
+      "description": "The meat-and-potatoes troops for any domain. Infantry have higher Toughness than other units of the same tier and ancestry.",
+      "movement": 1,
+      "attackTargets": [
+        "Adjacent units only"
+      ],
+      "cannotAttack": [
+        "Cavalry",
+        "Aerial"
+      ],
+      "rank_options": [
+        "Vanguard",
+        "Center",
+        "Reserve",
+        "Rear"
+      ],
+      "special_maneuvers": [
+        "Follow Up",
+        "Set for Charge"
+      ]
+    },
+    {
+      "id": "artillery",
+      "name": "Artillery",
+      "description": "Includes both archers and siege engines. Can attack any other unit on the field.",
+      "movement": 1,
+      "attackTargets": [
+        "Any unit"
+      ],
+      "rank_options": [
+        "Center"
+      ],
+      "notes": "Archers are squishy with low Defense/Toughness. Siege engines usually Tier II, require full round between attacks, can damage fortifications.",
+      "variants": [
+        "Archers",
+        "Siege Engines"
+      ]
+    },
+    {
+      "id": "cavalry",
+      "name": "Cavalry",
+      "description": "Move fast and hit hard. Can range across the battlefield attacking cavalry, infantry, and exposed artillery units.",
+      "movement": 1,
+      "attackTargets": [
+        "Other Cavalry",
+        "Infantry if exposed",
+        "Artillery if exposed"
+      ],
+      "rank_options": [
+        "Mobile across battlefield"
+      ],
+      "notes": "Higher Power than other units. Often one of few Tier I units dealing 2 damage per casualty."
+    },
+    {
+      "id": "aerial",
+      "name": "Aerial",
+      "description": "Flying units rare, mostly Tier III with stats comparable to average Tier II. Can attack any unit.",
+      "movement": 1,
+      "attackTargets": [
+        "Any unit"
+      ],
+      "canBeAttackedBy": [
+        "Artillery",
+        "Aerial"
+      ],
+      "rank_options": [
+        "Mobile across battlefield"
+      ],
+      "notes": "Higher Attack modifiers but low Defense and Toughness. Psychological impact often greater than actual battlefield effect."
+    },
+    {
+      "id": "levies",
+      "name": "Levies",
+      "description": "Untrained laborers and townfolk pressed into service. Cannot improve equipment or experience.",
+      "movement": 1,
+      "autoDisband": true,
+      "disbandAfter": "Every battle",
+      "rank_options": [
+        "Rear"
+      ],
+      "notes": "Best used defending rear against cavalry. Cheap to field (2 levies = 1 regular Tier I unit).",
+      "cannot_improve": true
+    },
+    {
+      "id": "siege_engine",
+      "name": "Siege Engine",
+      "description": "Usually Tier II units. Can attack any unit and can damage fortifications. Require an entire round between attacks.",
+      "movement": 1,
+      "attackTargets": [
+        "Any unit",
+        "Fortifications (automatic hit)"
+      ],
+      "rank_options": [
+        "Center"
+      ],
+      "notes": "Only unit that can damage fortifications. Typically only mustered when fighting fortifications."
+    }
+  ],
+  "ancestries": [
+    {
+      "id": "human",
+      "name": "Human",
+      "description": "Standard humanoid warriors"
+    },
+    {
+      "id": "elf",
+      "name": "Elf",
+      "description": "Graceful warriors, skilled archers"
+    },
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "description": "Sturdy, strong warriors, good with engineering"
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "description": "Powerful, aggressive warriors"
+    },
+    {
+      "id": "goblinoid",
+      "name": "Goblinoid",
+      "description": "Diverse troops including goblins, bugbears, hobgoblins"
+    },
+    {
+      "id": "undead",
+      "name": "Undead",
+      "description": "Skeleton and zombie-like troops"
+    }
+  ],
+  "martialAdvantages": [
+    {
+      "id": "skirmishers",
+      "name": "Skirmishers",
+      "description": "If any infantry or artillery unit this commander controls moves before it attacks, it has +2 to Attack tests for that activation, and it can immediately move 1 space after it attacks.",
+      "applies_to": [
+        "Infantry",
+        "Artillery"
+      ]
+    },
+    {
+      "id": "death_commandos",
+      "name": "Death Commandos",
+      "description": "When any infantry unit this commander controls succeeds on a Power test as part of an attack, that target unit must succeed on a Morale test or suffer 1 additional casualty.",
+      "applies_to": [
+        "Infantry"
+      ]
+    },
+    {
+      "id": "patrons_curse",
+      "name": "Patron's Curse",
+      "description": "If any heavy or super-heavy unit this commander controls makes a successful Power test made as part of an attack, the target unit is disoriented until the end of its next activation.",
+      "applies_to": [
+        "Heavy Infantry",
+        "Super-Heavy Infantry"
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "Tier I",
+      "description": "Least powerful, easiest to field",
+      "dependency": "Unlimited number can be fielded"
+    },
+    {
+      "tier": 2,
+      "name": "Tier II",
+      "description": "More powerful",
+      "dependency": "Can field one less than current number of Tier I units"
+    },
+    {
+      "tier": 3,
+      "name": "Tier III",
+      "description": "Powerful",
+      "dependency": "Can field one less than current number of Tier II units"
+    },
+    {
+      "tier": 4,
+      "name": "Tier IV",
+      "description": "Very powerful",
+      "dependency": "Can field one less than current number of Tier III units"
+    },
+    {
+      "tier": 5,
+      "name": "Tier V",
+      "description": "Most powerful",
+      "dependency": "Can field one less than current number of Tier IV units"
+    }
+  ]
+}

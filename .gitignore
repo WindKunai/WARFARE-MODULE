@@ -1,0 +1,15 @@
+warfareSplit
+*.log
+*.tmp
+
+
+guideInfo
+
+# Python Files
+
+find_units_detailed.py
+extract_units.py
+
+
+#json files
+extracted_text.json

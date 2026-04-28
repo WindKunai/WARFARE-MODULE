@@ -1,0 +1,366 @@
+[
+  {
+    "_id": "saxton-human-infantry-01",
+    "name": "Human Infantry (Unit 1)",
+    "type": "warfareUnit",
+    "img": "icons/svg/shield.svg",
+    "system": {
+      "unitType": "infantry",
+      "tier": "I",
+      "commander": "Lord Saxton",
+      "size": 12,
+      "stats": {
+        "atk": 4,
+        "def": 10,
+        "pow": 6,
+        "tou": 6,
+        "mor": 8,
+        "com": 4
+      },
+      "casualties": 0,
+      "maxCasualties": 6,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Skirmishers",
+          "description": "+2 ATK if the unit moves before attacking this round"
+        },
+        {
+          "name": "Death Commandos",
+          "description": "+1 casualty dealt on a successful Power test"
+        }
+      ],
+      "notes": "Core infantry unit of Saxton's army. Medium equipment, regular experience level."
+    }
+  },
+  {
+    "_id": "saxton-human-infantry-02",
+    "name": "Human Infantry (Unit 2)",
+    "type": "warfareUnit",
+    "img": "icons/svg/shield.svg",
+    "system": {
+      "unitType": "infantry",
+      "tier": "I",
+      "commander": "Lord Saxton",
+      "size": 12,
+      "stats": {
+        "atk": 4,
+        "def": 10,
+        "pow": 6,
+        "tou": 6,
+        "mor": 8,
+        "com": 4
+      },
+      "casualties": 0,
+      "maxCasualties": 6,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Skirmishers",
+          "description": "+2 ATK if the unit moves before attacking this round"
+        },
+        {
+          "name": "Death Commandos",
+          "description": "+1 casualty dealt on a successful Power test"
+        }
+      ],
+      "notes": "Core infantry unit of Saxton's army. Medium equipment, regular experience level."
+    }
+  },
+  {
+    "_id": "saxton-human-infantry-03",
+    "name": "Human Infantry (Unit 3)",
+    "type": "warfareUnit",
+    "img": "icons/svg/shield.svg",
+    "system": {
+      "unitType": "infantry",
+      "tier": "I",
+      "commander": "Lord Saxton",
+      "size": 12,
+      "stats": {
+        "atk": 4,
+        "def": 10,
+        "pow": 6,
+        "tou": 6,
+        "mor": 8,
+        "com": 4
+      },
+      "casualties": 0,
+      "maxCasualties": 6,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Skirmishers",
+          "description": "+2 ATK if the unit moves before attacking this round"
+        },
+        {
+          "name": "Death Commandos",
+          "description": "+1 casualty dealt on a successful Power test"
+        }
+      ],
+      "notes": "Core infantry unit of Saxton's army. Medium equipment, regular experience level."
+    }
+  },
+  {
+    "_id": "saxton-human-artillery-01",
+    "name": "Human Artillery - Longbow (Unit 1)",
+    "type": "warfareUnit",
+    "img": "icons/svg/bow.svg",
+    "system": {
+      "unitType": "artillery",
+      "tier": "I",
+      "commander": "Magus Therin",
+      "size": 8,
+      "stats": {
+        "atk": 5,
+        "def": 8,
+        "pow": 4,
+        "tou": 4,
+        "mor": 7,
+        "com": 3
+      },
+      "casualties": 0,
+      "maxCasualties": 4,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Skirmishers",
+          "description": "+2 ATK if the unit moves before attacking this round"
+        },
+        {
+          "name": "Volley Fire",
+          "description": "Can target any unit on the battlefield from ranged position"
+        }
+      ],
+      "notes": "Archer unit under Magus Therin. Light equipment, regular experience. Provides ranged firepower."
+    }
+  },
+  {
+    "_id": "saxton-human-artillery-02",
+    "name": "Human Artillery - Longbow (Unit 2)",
+    "type": "warfareUnit",
+    "img": "icons/svg/bow.svg",
+    "system": {
+      "unitType": "artillery",
+      "tier": "I",
+      "commander": "Magus Therin",
+      "size": 8,
+      "stats": {
+        "atk": 5,
+        "def": 8,
+        "pow": 4,
+        "tou": 4,
+        "mor": 7,
+        "com": 3
+      },
+      "casualties": 0,
+      "maxCasualties": 4,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Skirmishers",
+          "description": "+2 ATK if the unit moves before attacking this round"
+        },
+        {
+          "name": "Volley Fire",
+          "description": "Can target any unit on the battlefield from ranged position"
+        }
+      ],
+      "notes": "Archer unit under Magus Therin. Light equipment, regular experience. Provides ranged firepower."
+    }
+  },
+  {
+    "_id": "saxton-goblin-worg-riders",
+    "name": "Goblin Worg-riders",
+    "type": "warfareUnit",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "unitType": "cavalry",
+      "tier": "I",
+      "commander": "Sir Anglim",
+      "size": 6,
+      "stats": {
+        "atk": 5,
+        "def": 9,
+        "pow": 7,
+        "tou": 5,
+        "mor": 6,
+        "com": 3
+      },
+      "casualties": 0,
+      "maxCasualties": 3,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Charge",
+          "description": "Mobility allows devastating cavalry charges against exposed units"
+        },
+        {
+          "name": "Skirmish",
+          "description": "Can dart in and out of combat, attacking cavalry or exposed units"
+        }
+      ],
+      "notes": "Mobile cavalry unit under Sir Anglim. Goblinoid ancestry, light equipment, regular experience. Excellent for rapid strikes."
+    }
+  },
+  {
+    "_id": "saxton-bloodfangs",
+    "name": "Bloodfangs",
+    "type": "warfareUnit",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "unitType": "cavalry",
+      "tier": "II",
+      "commander": "Sir Anglim",
+      "size": 8,
+      "stats": {
+        "atk": 6,
+        "def": 11,
+        "pow": 8,
+        "tou": 7,
+        "mor": 7,
+        "com": 4
+      },
+      "casualties": 0,
+      "maxCasualties": 4,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Nasty in Combat",
+          "description": "Goblinoid cavalry unit with significant combat prowess"
+        },
+        {
+          "name": "Charge",
+          "description": "Heavy cavalry charges dealing increased damage"
+        },
+        {
+          "name": "Patron's Curse",
+          "description": "Heavy equipment causes disorientation on successful Power test"
+        }
+      ],
+      "notes": "Elite Tier II cavalry under Sir Anglim. Medium/Heavy equipment, regular experience. Nasty in combat, significantly stronger than Tier I cavalry."
+    }
+  },
+  {
+    "_id": "saxton-goblin-sappers",
+    "name": "Goblin Sappers",
+    "type": "warfareUnit",
+    "img": "icons/svg/hammer.svg",
+    "system": {
+      "unitType": "infantry",
+      "tier": "II",
+      "commander": "Prelate Ellingwood",
+      "size": 8,
+      "stats": {
+        "atk": 5,
+        "def": 11,
+        "pow": 8,
+        "tou": 8,
+        "mor": 7,
+        "com": 4
+      },
+      "casualties": 0,
+      "maxCasualties": 4,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Fortification Breaker",
+          "description": "Specialized in breaking down siege defenses and structures"
+        },
+        {
+          "name": "Engineering Expertise",
+          "description": "Can damage fortifications and constructs effectively"
+        },
+        {
+          "name": "Patron's Curse",
+          "description": "Heavy equipment causes disorientation on successful Power test"
+        }
+      ],
+      "notes": "Specialized Tier II unit under Prelate Ellingwood. Goblinoid ancestry, medium equipment, regular experience. Excellent against fortifications and structures."
+    }
+  },
+  {
+    "_id": "saxton-bugbear-heavy-claw",
+    "name": "Bugbear Heavy Claw",
+    "type": "warfareUnit",
+    "img": "icons/svg/axe.svg",
+    "system": {
+      "unitType": "infantry",
+      "tier": "III",
+      "commander": "Lady Morgant",
+      "size": 6,
+      "stats": {
+        "atk": 7,
+        "def": 12,
+        "pow": 10,
+        "tou": 10,
+        "mor": 8,
+        "com": 4
+      },
+      "casualties": 0,
+      "maxCasualties": 3,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Wreaks Havoc",
+          "description": "Devastating heavy assault unit that tears through enemy infantry"
+        },
+        {
+          "name": "Heavy Assault",
+          "description": "Extremely high Power and Toughness deal and absorb significant damage"
+        },
+        {
+          "name": "Patron's Curse",
+          "description": "Heavy equipment causes disorientation on successful Power test"
+        },
+        {
+          "name": "Death Commandos",
+          "description": "+1 casualty dealt on a successful Power test"
+        }
+      ],
+      "notes": "Tier III heavy assault unit under Lady Morgant. Bugbear ancestry, heavy equipment, regular experience. Wreaks havoc on infantry - devastating combat unit."
+    }
+  },
+  {
+    "_id": "saxton-grim-front",
+    "name": "Grim Front (Conditional)",
+    "type": "warfareUnit",
+    "img": "icons/svg/skull.svg",
+    "system": {
+      "unitType": "infantry",
+      "tier": "III",
+      "commander": "Lord Saxton",
+      "size": 8,
+      "stats": {
+        "atk": 6,
+        "def": 11,
+        "pow": 9,
+        "tou": 11,
+        "mor": 10,
+        "com": 5
+      },
+      "casualties": 0,
+      "maxCasualties": 4,
+      "disorganized": false,
+      "traits": [
+        {
+          "name": "Undead",
+          "description": "Necromantic unit immune to morale effects and certain forms of damage"
+        },
+        {
+          "name": "Death Commandos",
+          "description": "+1 casualty dealt on a successful Power test"
+        },
+        {
+          "name": "Patron's Curse",
+          "description": "Heavy supernatural aura causes disorientation on successful Power test"
+        },
+        {
+          "name": "Unholy Resilience",
+          "description": "Increased Toughness and immunity to certain effects"
+        }
+      ],
+      "notes": "Tier III undead special unit under Lord Saxton (Caliga Lifebane not defeated). Undead ancestry, heavy supernatural equipment, regular experience. Only available under certain campaign conditions. Extremely durable."
+    }
+  }
+]

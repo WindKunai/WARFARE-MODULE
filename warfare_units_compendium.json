@@ -1,0 +1,330 @@
+{
+  "compendium_title": "Kingdoms & Warfare Unit Compendium",
+  "introduction": "This compendium contains unit data extracted from the Kingdoms & Warfare books by MCDM Productions. Units are the core of mass combat in the Warfare system.",
+  "unit_types": [
+    {
+      "type": "Infantry",
+      "description": "The meat-and-potatoes troops for any domain. Infantry have higher Toughness than other units of the same tier and ancestry. They can only attack adjacent units and cannot attack cavalry or aerial units.",
+      "movement": 1,
+      "rank_deployment": ["Vanguard", "Center", "Reserve", "Rear"],
+      "attack_restrictions": ["Adjacent units only", "Cannot attack Cavalry", "Cannot attack Aerial"]
+    },
+    {
+      "type": "Artillery",
+      "description": "Includes both archers and siege engines. Can attack any other unit on the field. Archers are squishy with low Defense and Toughness. Siege engines usually Tier II, require a full round between attacks.",
+      "movement": 1,
+      "rank_deployment": ["Center"],
+      "attack_restrictions": ["Can attack any unit"],
+      "notes": "Siege engines can damage fortifications (automatically hit)"
+    },
+    {
+      "type": "Cavalry",
+      "description": "Move fast and hit hard. Can range across the battlefield attacking cavalry, infantry, and exposed artillery units. Higher Power than other units of same tier. One of few Tier I units that deal 2 damage per casualty.",
+      "movement": 1,
+      "rank_deployment": ["Mobile across battlefield"],
+      "attack_restrictions": ["Can attack other Cavalry", "Can attack Infantry if exposed", "Can attack Artillery if exposed"]
+    },
+    {
+      "type": "Aerial",
+      "description": "Flying units rare, mostly Tier III with stats comparable to average Tier II. Can attack any unit. Very few units can return fire (only artillery and other aerial units). Have higher Attack modifiers but low Defense and Toughness.",
+      "movement": 1,
+      "rank_deployment": ["Mobile across battlefield"],
+      "attack_restrictions": ["Can attack any unit"]
+    },
+    {
+      "type": "Levies",
+      "description": "Untrained troops, typically laborers and townfolk. They know their likely fate but believe in the domain's cause. Cannot have gear or experience improved. Automatically disband after every battle.",
+      "movement": 1,
+      "rank_deployment": ["Rear"]
+    },
+    {
+      "type": "Siege Engine",
+      "description": "Usually Tier II units. Can attack any other unit and can damage fortifications. Require an entire round between attacks (loading, winding, etc.). Typically only mustered when fighting fortifications.",
+      "movement": 1,
+      "rank_deployment": ["Center"],
+      "attack_restrictions": ["Can attack any unit", "Automatically hits fortifications"]
+    }
+  ],
+  "ancestries": [
+    "Human",
+    "Elf",
+    "Dwarf",
+    "Orc",
+    "Goblinoid",
+    "Undead"
+  ],
+  "saxton_army_units": [
+    {
+      "unit_name": "Human Infantry",
+      "ancestry": "Human",
+      "type": "Infantry",
+      "tier": "I",
+      "quantity": 3,
+      "commander": "Lord Saxton",
+      "notes": "Basic human infantry troops"
+    },
+    {
+      "unit_name": "Human Artillery (Longbow)",
+      "ancestry": "Human",
+      "type": "Artillery",
+      "tier": "I",
+      "quantity": 2,
+      "equipment": "Light",
+      "commander": "Magus Therin",
+      "notes": "Archers with longbows"
+    },
+    {
+      "unit_name": "Bloodfangs",
+      "ancestry": "Goblinoid",
+      "type": "Cavalry",
+      "tier": "II",
+      "equipment": "Medium",
+      "commander": "Sir Anglim",
+      "notes": "Nasty cavalry unit, quite effective"
+    },
+    {
+      "unit_name": "Goblin Sappers",
+      "ancestry": "Goblinoid",
+      "type": "Infantry",
+      "tier": "II",
+      "commander": "Prelate Ellingwood",
+      "notes": "Can possibly take out fortifications"
+    },
+    {
+      "unit_name": "Goblin Worg-riders",
+      "ancestry": "Goblinoid",
+      "type": "Cavalry",
+      "tier": "I",
+      "commander": "Sir Anglim",
+      "notes": "Mobile goblinoid cavalry"
+    },
+    {
+      "unit_name": "Bugbear Heavy Claw",
+      "ancestry": "Goblinoid",
+      "type": "Infantry",
+      "tier": "III",
+      "equipment": "Heavy",
+      "commander": "Lady Morgant",
+      "notes": "Wreaks havoc against infantry, heavy assault unit"
+    },
+    {
+      "unit_name": "Grim Front",
+      "type": "Special Unit",
+      "ancestry": "Undead",
+      "tier": "III",
+      "commander": "Lord Saxton",
+      "requirement": "Defeat Caliga Lifebane (Necromancer)",
+      "notes": "Undead special unit, only available if Caliga Lifebane not disrupted"
+    }
+  ],
+  "unit_tiers_explained": [
+    {
+      "tier": "I",
+      "power_level": "Least powerful, easiest to field",
+      "unit_dependencies": "Unlimited number can be fielded"
+    },
+    {
+      "tier": "II",
+      "power_level": "More powerful",
+      "unit_dependencies": "Can field one less than current number of Tier I units"
+    },
+    {
+      "tier": "III",
+      "power_level": "Powerful",
+      "unit_dependencies": "Can field one less than current number of Tier II units"
+    },
+    {
+      "tier": "IV",
+      "power_level": "Very powerful",
+      "unit_dependencies": "Can field one less than current number of Tier III units"
+    },
+    {
+      "tier": "V",
+      "power_level": "Most powerful",
+      "unit_dependencies": "Can field one less than current number of Tier IV units"
+    }
+  ],
+  "base_unit_stats_structure": {
+    "note": "The following shows the stat structure. Actual base stats vary by ancestry, type, and equipment level. All values are modified by Experience and Equipment bonuses.",
+    "statistics": {
+      "ATK": "Attack - measure of unit's tactical effectiveness and ability to execute attack orders",
+      "DEF": "Defense - ability to maneuver and avoid/minimize attacks (DC for opposed Attack tests)",
+      "POW": "Power - physical prowess in battle (second part of attack, deals additional casualties)",
+      "TOU": "Toughness - physical hardiness and ability to withstand attacks (opposed to POW tests)",
+      "MOR": "Morale - ability to maintain discipline against overwhelming odds, magic, and death",
+      "COM": "Command - ability to correctly interpret orders and execute them successfully"
+    }
+  },
+  "unit_experience_levels": [
+    {
+      "level": "Levies",
+      "description": "Untrained, zero experience",
+      "cannot_improve": true
+    },
+    {
+      "level": "Regular",
+      "description": "Baseline trained unit"
+    },
+    {
+      "level": "Veteran",
+      "description": "Has survived one battle"
+    },
+    {
+      "level": "Elite",
+      "description": "Has survived four battles total"
+    },
+    {
+      "level": "Super-Elite",
+      "description": "Has survived eight battles total"
+    }
+  ],
+  "unit_equipment_levels": [
+    {
+      "level": "Light",
+      "description": "Lightly armed and armored, lower bonuses"
+    },
+    {
+      "level": "Medium",
+      "description": "Moderate arms and armor"
+    },
+    {
+      "level": "Heavy",
+      "description": "Heavy weapons and armor"
+    },
+    {
+      "level": "Super-Heavy",
+      "description": "Maximum armor and weapons, best bonuses"
+    }
+  ],
+  "experience_bonuses_infantry": {
+    "Levies": {
+      "additional_attacks": 0,
+      "attack": -1,
+      "defense": -2,
+      "morale": -2,
+      "command": -1
+    },
+    "Regular": {
+      "additional_attacks": 0,
+      "attack": 0,
+      "defense": 0,
+      "morale": 0,
+      "command": 1
+    },
+    "Veteran": {
+      "additional_attacks": 0,
+      "attack": 1,
+      "defense": 2,
+      "morale": 2,
+      "command": 2
+    },
+    "Elite": {
+      "additional_attacks": 1,
+      "attack": 2,
+      "defense": 4,
+      "morale": 4,
+      "command": 2
+    },
+    "Super-Elite": {
+      "additional_attacks": 1,
+      "attack": 3,
+      "defense": 6,
+      "morale": 6,
+      "command": 3
+    }
+  },
+  "equipment_bonuses_infantry": {
+    "Light": {
+      "power": 0,
+      "toughness": 0,
+      "damage": 0
+    },
+    "Medium": {
+      "power": 2,
+      "toughness": 2,
+      "damage": 0
+    },
+    "Heavy": {
+      "power": 4,
+      "toughness": 4,
+      "damage": 0
+    },
+    "Super-Heavy": {
+      "power": 6,
+      "toughness": 6,
+      "damage": 1
+    }
+  },
+  "unit_traits_available": {
+    "note": "Units have specific traits that determine what special maneuvers or abilities they can use. Full descriptions are on page 126 of the Warfare chapter."
+  },
+  "martial_advantages_by_class": [
+    {
+      "class": "Fighter",
+      "description": "Soldiers are most highly trained on the battlefield, know range of techniques",
+      "class_advantages": [
+        {
+          "domain_size": 1,
+          "advantages": ["Heavy Training", "Martial Rally"]
+        },
+        {
+          "domain_size": 2,
+          "advantages": ["Strafe"]
+        },
+        {
+          "domain_size": 3,
+          "advantages": ["Charge"]
+        },
+        {
+          "domain_size": 4,
+          "advantages": ["Volley"]
+        },
+        {
+          "domain_size": 5,
+          "advantages": ["Field Promotion"]
+        }
+      ]
+    },
+    {
+      "class": "Illrigger",
+      "description": "Fighting hellknight whose soldiers call upon fell powers to terrify enemies",
+      "class_advantages": [
+        {
+          "domain_size": 1,
+          "advantages": ["Death Commandos", "Infernal Rally"]
+        },
+        {
+          "domain_size": 2,
+          "advantages": ["Terror Troops"]
+        },
+        {
+          "domain_size": 3,
+          "advantages": ["Scroll of Hellfire"]
+        },
+        {
+          "domain_size": 4,
+          "advantages": ["Execution"]
+        },
+        {
+          "domain_size": 5,
+          "advantages": ["The Ruin of the World"]
+        }
+      ]
+    }
+  ],
+  "saxton_army_martial_advantages": [
+    {
+      "name": "Skirmishers",
+      "description": "If any infantry or artillery unit this commander controls moves before it attacks, it has +2 to Attack tests for that activation, and it can immediately move 1 space after it attacks."
+    },
+    {
+      "name": "Death Commandos",
+      "description": "When any infantry unit this commander controls succeeds on a Power test as part of an attack, that target unit must succeed on a Morale test or suffer 1 additional casualty."
+    },
+    {
+      "name": "Patron's Curse",
+      "description": "If any heavy or super-heavy unit this commander controls makes a successful Power test made as part of an attack, the target unit is disoriented until the end of its next activation."
+    }
+  ],
+  "extraction_notes": "This compendium was extracted from the Kingdoms & Warfare PDF books. The actual unit cards with base statistics are referenced throughout but full stat blocks with numerical base values were not fully accessible in the PDF extraction. The structure and relationships described here are accurate to the system."
+}

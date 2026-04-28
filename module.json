@@ -24,9 +24,22 @@
       "name": "saxton-units",
       "label": "Saxton's Army Units",
       "path": "packs/saxton-units.json",
-      "type": "Item",
-      "system": "dnd5e"
+      "type": "Item"
     }
   ],
+  "templates": {
+    "Item": {
+      "warfareUnit": {
+        "icon": "icons/svg/item-bag.svg",
+        "label": "Warfare Unit"
+      }
+    },
+    "Actor": {
+      "commander": {
+        "icon": "icons/svg/stature.svg",
+        "label": "Commander"
+      }
+    }
+  },
   "flags": {}
 }
